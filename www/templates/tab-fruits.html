@@ -5,7 +5,8 @@
   <ion-content>
     <ion-list>
       <ion-item ng-repeat="fruit in fruits" type="item-text-wrap">
-        {{fruit.name}} {{fruit.value}}
+        <span class="item-name">{{fruit.name}}</span>
+        <span class="item-price">{{fruit.price}}</span>
       </ion-item>
     </ion-list>
   </ion-content>
