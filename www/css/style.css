@@ -1,1 +1,30 @@
 /* Empty. Add your own CSS if you like */
+
+.tab-item.tab-item-active,
+.tab-item.active,
+.tab-item.activated {
+    opacity: 1;
+    color: #fd7400;
+}
+
+.tab-item .icon {
+    display: block;
+    margin: 0 auto;
+    padding-top: 5px;
+    height: 32px;
+    font-size: 32px;
+}
+
+.tab-title {
+    display: block;
+    margin: 0 auto;
+}
+
+.about {
+    padding: 20px;
+}
+
+.about p {
+    font-size: 18px;
+    line-height: 24px;
+}

@@ -1,26 +1,14 @@
-angular.module('starter.services', [])
-
-/**
- * A simple example service that returns some data.
- */
-.factory('Friends', function() {
-  // Might use a resource here that returns a JSON array
-
-  // Some fake testing data
-  var friends = [
-    { id: 0, name: 'Scruff McGruff' },
-    { id: 1, name: 'G.I. Joe' },
-    { id: 2, name: 'Miss Frizzle' },
-    { id: 3, name: 'Ash Ketchum' }
-  ];
-
+angular.module('chennaiMarket.services', [])
+.factory('KimonoService', function($http) {
   return {
-    all: function() {
-      return friends;
+    getVegetables: function() {
+      return $http.jsonp('https://www.kimonolabs.com/api/6jfd7ua0?apikey=5608c5fa9f5c237d8ffc08188fc716e0&callback=JSON_CALLBACK');
     },
-    get: function(friendId) {
-      // Simple index lookup
-      return friends[friendId];
+    getFruits: function() {
+      return $http.jsonp('https://www.kimonolabs.com/api/eet4vfik?apikey=5608c5fa9f5c237d8ffc08188fc716e0&callback=JSON_CALLBACK');
+    },
+    getGoldSilver: function() {
+      return $http.jsonp('https://www.kimonolabs.com/api/ds5knnw6?apikey=5608c5fa9f5c237d8ffc08188fc716e0&callback=JSON_CALLBACK');
     }
   }
 });

@@ -1,15 +1,38 @@
-angular.module('starter.controllers', [])
+angular.module('chennaiMarket.controllers', [])
 
-.controller('DashCtrl', function($scope) {
+.controller('VegetablesCtrl', function($scope, $ionicLoading, $ionicPopup, KimonoService) {
+    $ionicLoading.show({ template: 'Loading...'  });
+    KimonoService.getVegetables().then(function(response) {
+            $scope.vegetables = response.data.results.vegetables;
+        }, function(error) {
+            $ionicPopup.alert({ title: 'Error!', template: error && error.data });
+        }).finally(function () {
+            $ionicLoading.hide();
+        });
+
 })
 
-.controller('FriendsCtrl', function($scope, Friends) {
-  $scope.friends = Friends.all();
+.controller('FruitsCtrl', function($scope, $ionicLoading, $ionicPopup, KimonoService) {
+    $ionicLoading.show({ template: 'Loading...'  });
+    KimonoService.getFruits().then(function(response) {
+            $scope.fruits = response.data.results.fruits;
+        }, function(error) {
+            $ionicPopup.alert({ title: 'Error!', template: error && error.data });
+        }).finally(function () {
+            $ionicLoading.hide();
+        });
+
 })
 
-.controller('FriendDetailCtrl', function($scope, $stateParams, Friends) {
-  $scope.friend = Friends.get($stateParams.friendId);
-})
-
-.controller('AccountCtrl', function($scope) {
+.controller('GoldSilverCtrl', function($scope, $ionicLoading, $ionicPopup, KimonoService) {
+    $ionicLoading.show({ template: 'Loading...'  });
+    KimonoService.getGoldSilver().then(function(response) {
+            $scope.gold = response.data.results.gold;
+            $scope.silver = response.data.results.silver;
+        }, function(error) {
+            $ionicPopup.alert({ title: 'Error!', template: error && error.data });
+        }).finally(function () {
+            $ionicLoading.hide();
+        });
 });
+
