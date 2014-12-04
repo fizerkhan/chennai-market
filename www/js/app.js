@@ -62,13 +62,20 @@ angular.module('chennaiMarket', ['ionic', 'chennaiMarket.controllers', 'chennaiM
       }
     })
 
-    .state('tab.about', {
-      url: '/about',
+    .state('tab.fuel', {
+      url: '/fuel',
       views: {
-        'tab-about': {
-          templateUrl: 'templates/tab-about.html'
+        'tab-fuel': {
+          templateUrl: 'templates/tab-fuel.html',
+          controller: 'FuelCtrl'
         }
       }
+    })
+
+    .state('about', {
+      url: '/about',
+      templateUrl: 'templates/about.html',
+      controller: 'AboutCtrl'
     })
 
   // if none of the above states are matched, use this as the fallback
