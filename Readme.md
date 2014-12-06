@@ -9,3 +9,4 @@ Checkout LOLers readme for more information
 
     $ cordova plugin add org.apache.cordova.network-information
     $ cordova plugin add https://github.com/EddyVerbruggen/SocialSharing-PhoneGap-Plugin.git
+    $ cordova plugin add org.apache.cordova.inappbrowser
