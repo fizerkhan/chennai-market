@@ -90,7 +90,6 @@ angular.module('chennaiMarket.controllers', ['ngCordova', 'chennaiMarket.service
             .shareViaEmail('', 'Chennai Market Feedback', 'fizerkhan@gmail.com');
     }
     $scope.rateUs = function () {
-        // It does not work.
         window.open('market://details?id=com.fizerkhan.chennaimarket', '_system');
     }
     $scope.goBack = function() {
