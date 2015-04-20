@@ -42,16 +42,16 @@ If it does not work, you can do as follows
 
 [Refer here](http://ionicframework.com/docs/guide/publishing.html)
 
-Before release, increase version number both in config.xml and package.json
+Before release, increase version number both in `config.xml` and `package.json`
 
     $ cordova build --release android
     $ jarsigner -verbose -sigalg SHA1withRSA -digestalg SHA1 -keystore release-key.keystore platforms/android/ant-build/ChennaiMarket-release-unsigned.apk alias_name
 
     $ zipalign -v 4 platforms/android/ant-build/ChennaiMarket-release-unsigned.apk ChennaiMarket.apk
-    $ mv ChennaiMarket.apk ../releases/v0.0.x/
+    $ mkdir releases/v0.0.x
+    $ mv ChennaiMarket.apk releases/v0.0.x/
 
 Then upload to Google Play Store.
-
 
 You may also use
 
