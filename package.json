@@ -1,6 +1,6 @@
 {
   "name": "chennaimarket",
-  "version": "1.0.0",
+  "version": "0.0.3",
   "description": "ChennaiMarket: Live Market price of vegetables, fruits, gold and silver in Chennai.",
   "dependencies": {
     "gulp": "^3.5.6",
